@@ -1,0 +1,23 @@
+.newbtn{
+    border: none;
+    border-radius: 30px;
+    width: 80px;
+    height: 40px;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #ffffff;
+    background-size: 200%;
+}
+
+.btn1{
+    background-image: linear-gradient(to left,#A9F5F2,#3face4,#CEF6F5);
+}
+
+.newbtn:hover{
+    background-position: right;
+}
+
+
+
+

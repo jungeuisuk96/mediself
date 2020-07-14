@@ -1,0 +1,129 @@
+/*malebox*/
+.malebox{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    
+  }
+  
+  .malebox a {
+    text-decoration: none;
+    color:white;
+    font-size: 5rem;
+    padding: 10rem;
+  }
+  
+  .malebox a:after, .malebox a:before{
+    position: absolute;
+    width:0%;
+    height: 0%;
+    transition: .8s;
+    opacity: 0;
+  }
+  
+  .malebox a:before{
+    content: '';
+    top:0;
+    Left: 0;
+    border-top: 1px solid #3face4;
+    border-left: 1px solid #3face4;
+    box-sizing: border-box;
+  }
+  
+  .malebox a:after{
+    content: '';
+    bottom:0;
+    right: 0;
+    border-bottom: 1px solid #3face4;
+    border-right: 1px solid #3face4;
+    box-sizing: border-box;
+  }
+  
+  .malebox a:hover:before, .malebox a:hover:after{
+    width:100%;
+    height: 100%;
+    opacity: 1;
+  }
+  
+  .malebox a span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    Left: -120%;
+    transition: 1s;
+    background: rgba(255,255,255,.7);
+    transform: skewX(6deg);
+  
+  }
+  
+  .malebox a:hover span{
+    Left:120%;
+  }
+  
+  /*femalebox*/
+  .femalebox{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    
+  }
+  
+  .femalebox a {
+    text-decoration: none;
+    color:white;
+    font-size: 5rem;
+    padding: 10rem;
+  }
+  
+  .femalebox a:after, .femalebox a:before{
+    position: absolute;
+    width:0%;
+    height: 0%;
+    transition: .8s;
+    opacity: 0;
+  }
+  
+  .femalebox a:before{
+    content: '';
+    top:0;
+    Left: 0;
+    border-top: 1px solid #F361A6;
+    border-left: 1px solid #F361A6;
+    box-sizing: border-box;
+  }
+  
+  .femalebox a:after{
+    content: '';
+    bottom:0;
+    right: 0;
+    border-bottom: 1px solid #F361A6;
+    border-right: 1px solid #F361A6;
+    box-sizing: border-box;
+  }
+  
+  .femalebox a:hover:before, .femalebox a:hover:after{
+    width:100%;
+    height: 100%;
+    opacity: 1;
+  }
+  
+  .femalebox a span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    Left: -120%;
+    transition: 1s;
+    background: rgba(255,255,255,.7);
+    transform: skewX(6deg);
+  
+  }
+  
+  .femalebox a:hover span{
+    Left:120%;
+  }

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.mycom.hanit.mediself.Mapper.BoardMapper">
+
+	<insert id="insert">
+		insert into notice (ntitle, ncontent)
+		values(#{ntitle}, #{ncontent})
+	</insert>
+
+	<select id="read" resultType="kr.mycom.hanit.mediself.domain.BoardVo">
+		select
+		nno, ntitle, ncontent, nregdate, ncnt
+		from
+		notice
+		where nno = #{nno}
+	</select>
+
+    <delete id="delete">
+        delete from notice
+        where
+            nno = #{nno}
+    </delete>
+    
+	<update id="update">
+		update notice set
+            ntitle = #{ntitle}
+            , ncontent = #{ncontent}
+            , nregdate = now()
+        where
+            nno = #{nno}
+	</update>
+	
+	
+	<select id="listAll" resultType="kr.mycom.hanit.mediself.domain.BoardVo">
+ <![CDATA[
+ select 
+   nno, ntitle, ncontent, nregdate, ncnt 
+ from 
+   notice 
+ where nno > 0 
+ order by nno desc, nregdate desc
+ ]]>
+	</select>
+
+	<select id="view" resultType="kr.mycom.hanit.mediself.domain.BoardVo">
+ <![CDATA[
+ select 
+  nno, ntitle, ncontent, nregdate, ncnt 
+ from 
+   notice 
+ where nno > 0 
+ order by nno desc, nregdate desc
+ limit #{page}, 10
+ ]]>
+	</select>
+
+	<select id="listCriteria" resultType="BoardVo">
+ <![CDATA[
+ select 
+   nno, ntitle, ncontent, nregdate, ncnt 
+ from 
+   notice 
+ where nno > 0 
+ order by nno desc, nregdate desc
+ limit #{pageStart}, #{perPageNum}
+ ]]>
+	</select>
+
+
+	<update id="increaseViewcnt">
+		update notice set ncnt = ncnt + 1
+		where nno = #{nno}
+	</update>
+
+ 
+</mapper>
