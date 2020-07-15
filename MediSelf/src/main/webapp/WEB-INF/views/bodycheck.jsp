@@ -503,7 +503,7 @@
         $( "#symptom" ).autocomplete({
           source: availableTags,
           select: function( event, ui ) {
-        	  $(".demo").append('<p style="background-color: #1576d1; color:#fff; border-radius:16px; padding:6px 34px; max-width:100%; float:left; margin-right:1%; margin-top:1%;">기침</p>')
+        	  $(".demo").append('<p style="background-color: #1576d1; color:#fff; border-radius:16px; padding:6px 34px; max-width:100%; float:left; margin-right:1%; margin-top:1%;">'+ui.item.value+'</p>')
           }
         });
       } );
