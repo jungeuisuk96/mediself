@@ -216,9 +216,9 @@
                             	<div class="popover-body">
                             	<form class="form-inline" role="form">
                             			<div class="btn-group-vertical">
-                            			<button class='btn btn-outline-primary' onclick = "fevercheck()">고열</button><hr hidden>
-                                        <button class='btn btn-outline-primary'>두통</button><hr hidden>
-                                        <button class='btn btn-outline-primary'>어지러움</button>
+                            			<button class='btn btn-outline-primary' onclick = "symcheck()" value="고열">고열</button><hr hidden>
+                                        <button class='btn btn-outline-primary' onclick = "symcheck()" value="두통">두통</button><hr hidden>
+                                        <button class='btn btn-outline-primary'onclick = "symcheck()" value="어지러움">어지러움</button>
                                         </div>
                                    </form>
                                    </div>
@@ -231,9 +231,9 @@
                             	<div class="popover-body">
                             	<form class="form-inline" role="form">
                             			<div class="btn-group-vertical">
-                            			<button class='btn btn-outline-primary'>가래</button><hr hidden>
-                                        <button class='btn btn-outline-primary'>기침</button><hr hidden>
-                                        <button class='btn btn-outline-primary'>목붓기</button>
+                            			<button class='btn btn-outline-primary'onclick = "symcheck()" value="가래">가래</button><hr hidden>
+                                        <button class='btn btn-outline-primary'onclick = "symcheck()" value="기침">기침</button><hr hidden>
+                                        <button class='btn btn-outline-primary'onclick = "symcheck()" value="목붓기">목붓기</button>
                                         </div>
                                    </form>
                                    </div>
@@ -246,9 +246,9 @@
                             	<div class="popover-body">
                             	<form class="form-inline" role="form">
                             			<div class="btn-group-vertical">
-                            			<button class='btn btn-outline-primary'>빠른 심장박동</button><hr hidden>
-                                        <button class='btn btn-outline-primary'>숨막힘</button><hr hidden>
-                                        <button class='btn btn-outline-primary'>흉통</button>
+                            			<button class='btn btn-outline-primary'onclick = "symcheck()" value="빠른 심장박동">빠른 심장박동</button><hr hidden>
+                                        <button class='btn btn-outline-primary'onclick = "symcheck()" value="숨막힘">숨막힘</button><hr hidden>
+                                        <button class='btn btn-outline-primary'onclick = "symcheck()" value="흉통">흉통</button>
                                         </div>
                                    </form>
                                    </div>
@@ -261,9 +261,9 @@
                             	<div class="popover-body">
                             	<form class="form-inline" role="form">
                             			<div class="btn-group-vertical">
-                            			<button class='btn btn-outline-primary' onclick = "stomachcheck()">복통</button><hr hidden>
-                                        <button class='btn btn-outline-primary'>소화불량</button><hr hidden>
-                                        <button class='btn btn-outline-primary'>팽만감</button>
+                            			<button class='btn btn-outline-primary' onclick = "symcheck()" value="복통">복통</button><hr hidden>
+                                        <button class='btn btn-outline-primary'onclick = "symcheck()" value="소화불량">소화불량</button><hr hidden>
+                                        <button class='btn btn-outline-primary'onclick = "symcheck()" value="팽만감">팽만감</button>
                                         </div>
                                    </form>
                                    </div>
@@ -275,9 +275,9 @@
                             	<div class="popover-body">
                             	<form class="form-inline" role="form">
                             			<div class="btn-group-vertical">
-                            			<button class='btn btn-outline-primary'>관절염</button><hr hidden>
-                                        <button class='btn btn-outline-primary'>힘이없음</button><hr hidden>
-                                        <button class='btn btn-outline-primary'>뼈가 부러짐</button>
+                            			<button class='btn btn-outline-primary'onclick = "symcheck()" value="관절염">관절염</button><hr hidden>
+                                        <button class='btn btn-outline-primary'onclick = "symcheck()" value="힘이없음">힘이없음</button><hr hidden>
+                                        <button class='btn btn-outline-primary'onclick = "symcheck()" value="뼈가 부러짐">뼈가 부러짐</button>
                                         </div>
                                    </form>
                                    </div>
@@ -290,9 +290,9 @@
                             	<div class="popover-body">
                             	<form class="form-inline" role="form">
                             			<div class="btn-group-vertical">
-                            			<button class='btn btn-outline-primary'>요통</button><hr hidden>
-                                        <button class='btn btn-outline-primary'>움직일때 아픔</button><hr hidden>
-                                        <button class='btn btn-outline-primary'>앉은자세 뒤틀림</button>
+                            			<button class='btn btn-outline-primary'onclick = "symcheck()" value="요통">요통</button><hr hidden>
+                                        <button class='btn btn-outline-primary'onclick = "symcheck()" value="움직일때 아픔">움직일때 아픔</button><hr hidden>
+                                        <button class='btn btn-outline-primary'onclick = "symcheck()" value="앉은자세 뒤틀림">앉은자세 뒤틀림</button>
                                         </div>
                                    </form>
                                    </div>
@@ -304,9 +304,9 @@
                             	<div class="popover-body">
                             	<form class="form-inline" role="form">
                             			<div class="btn-group-vertical">
-                            			<button class='btn btn-outline-primary'>다리 통증</button><hr hidden>
-                                        <button class='btn btn-outline-primary'>서있기 힘듬</button><hr hidden>
-                                        <button class='btn btn-outline-primary'>8자걸음</button>
+                            			<button class='btn btn-outline-primary'onclick = "symcheck()" value="다리 통증">다리 통증</button><hr hidden>
+                                        <button class='btn btn-outline-primary'onclick = "symcheck()" value="서있기 힘듬">서있기 힘듬</button><hr hidden>
+                                        <button class='btn btn-outline-primary'onclick = "symcheck()" value="8자 걸음">8자걸음</button>
                                         </div>
                                    </form>
                                    </div>
@@ -509,13 +509,11 @@
       } );
       </script>
       <script>
-      	function fevercheck(){
-      		$(".demo").append('<p style="background-color: #1576d1; color:#fff; border-radius:16px; padding:6px 34px; max-width:100%; float:left; margin-right:1%; margin-top:1%;">고열</p>')
-      	}
-      </script>
-      <script>
-      	function stomachcheck(){
-      		$(".demo").append('<p style="background-color: #1576d1; color:#fff; border-radius:16px; padding:6px 34px; max-width:100%; float:left; margin-right:1%; margin-top:1%;">복통</p>')
+      	
+      	function symcheck(){
+      		var e = window.event,
+            btn = e.target
+      		$(".demo").append('<p style="background-color: #1576d1; color:#fff; border-radius:16px; padding:6px 34px; max-width:100%; float:left; margin-right:1%; margin-top:1%;">'+btn.value+'</p>')
       	}
       </script>
       
